@@ -54,9 +54,13 @@ namespace UserRegistrationUsingRegex
         public void ValidateEmail(string input)
         {
             if (Regex.IsMatch(input, Email))
+            {
                 Console.WriteLine("Your Email Id is  " + input);
+            }
             else
+            {
                 Console.WriteLine("Entered Email is in invalid format.");
+            }
         }
     }
 }
