@@ -12,7 +12,7 @@
             {
               
                 Console.WriteLine("Select option");
-                Console.WriteLine("1.First Name \n 2.Last Name \n 3.Mobile Number \n 4.Email");
+                Console.WriteLine("1.First Name \n 2.Last Name \n 3.Mobile Number \n 4.Email \n 5.PassWord");
                  choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -35,6 +35,11 @@
                         Console.WriteLine("Enter your Email Id");
                         string email = Console.ReadLine();
                         userFirstName.ValidateEmail(email);
+                        break;
+                    case 5:
+                        Console.WriteLine("Enter your Password");
+                        string password = Console.ReadLine();
+                        userFirstName.ValidatePassword(password);
                         break;
                 }
             }
