@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace UserRegistrationUsingRegex
+{
+    public  class UserRegistration
+    {
+        const string firstName = "^[A-Z]{1}[a-z]{2,}$";
+        public void ValidateFirstName(string input)
+        {
+            if (Regex.IsMatch(input, firstName))
+                
+            {
+                Console.WriteLine("Your First name is  " + input);
+
+            }
+        
+            else
+            {
+                Console.WriteLine("Entered name is in invalid .");
+            }
+        }
+    }
+}
