@@ -12,6 +12,7 @@ namespace UserRegistrationUsingRegex
         const string firstName = "^[A-Z]{1}[a-z]{2,}$";
         const string lastName = "^[A-Z]{1}[a-zA-Z]{2,}$";
         const string mobileNumber = "^91[ ]{1}[5-9]{1}[0-9]{9}$";
+        const string Email = "^[a-z]{3,}[.]{0,}[a-z]{0,}[@]{1}[a-z]{2,}[.]{1}[a-z]{2,}[.]{0,}[a-z]{0,}$";
         public void ValidateFirstName(string input)
         {
             if (Regex.IsMatch(input, firstName))
@@ -48,6 +49,14 @@ namespace UserRegistrationUsingRegex
             {
                 Console.WriteLine("Entered Mobile Number is in invalid format.");
             }
+            
+        }
+        public void ValidateEmail(string input)
+        {
+            if (Regex.IsMatch(input, Email))
+                Console.WriteLine("Your Email Id is  " + input);
+            else
+                Console.WriteLine("Entered Email is in invalid format.");
         }
     }
 }
