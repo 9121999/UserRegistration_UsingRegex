@@ -12,7 +12,7 @@
             {
               
                 Console.WriteLine("Select option");
-                Console.WriteLine("1.First Name \n 2.Last Name");
+                Console.WriteLine("1.First Name \n 2.Last Name \n 3.Mobile Number");
                  choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -25,6 +25,11 @@
                         Console.WriteLine("Enter your Last name");
                         string lastName = Console.ReadLine();
                         userFirstName.ValidateLastName(lastName);
+                        break;
+                    case 3:
+                        Console.WriteLine("Enter your Mobile Number");
+                        string mobileNumber = Console.ReadLine();
+                        userFirstName.ValidateMobileNumber(mobileNumber);
                         break;
                 }
             }
