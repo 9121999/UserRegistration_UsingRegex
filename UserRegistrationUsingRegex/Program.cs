@@ -12,7 +12,7 @@
             {
               
                 Console.WriteLine("Select option");
-                Console.WriteLine("1.First Name");
+                Console.WriteLine("1.First Name \n 2.Last Name");
                  choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -20,6 +20,11 @@
                         Console.WriteLine("Enter your First name");
                         string firstName = Console.ReadLine();
                         userFirstName.ValidateFirstName(firstName);
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter your Last name");
+                        string lastName = Console.ReadLine();
+                        userFirstName.ValidateLastName(lastName);
                         break;
                 }
             }
